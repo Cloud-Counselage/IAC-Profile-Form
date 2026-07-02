@@ -697,7 +697,7 @@
 
       // --- INITIALIZATION ---
       showLoading('Loading configuration...');
-      fetch(API_URL + "?action=getInitialData").then(r=>r.json()).then(data => {
+      fetch(API_URL + "?action=getInitialData&t=" + new Date().getTime()).then(r=>r.json()).then(data => {
          PERSONA_FIELDS = data.fields;
          APP_CONFIG = data.config;
          
